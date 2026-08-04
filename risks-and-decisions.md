@@ -14,6 +14,8 @@ Record of the hard calls made and the risks knowingly carried. Snapshot: 23 July
 
 5. **Non-dev mode never auto-merges to main**, even after user approval. A PR-reviewer model is a required extra gate.
 
+6. **Cheap iteration, not perfect intake.** An earlier "intake layer" design (voice interview -> written brief -> approval gate -> build) was rejected as waterfall in a voice interface: it assumed clarity exists to be extracted rather than discovered, demanded sustained attention at the moment the user wanted to hand off, and delayed the artifact that would have created the clarity anyway. Replaced by minimizing the COST of being wrong rather than the probability. See the-loop.md. Voice is retained as input convenience only, not as a differentiator. Video calling rejected outright.
+
 ## Risks reduced (mitigated, not eliminated)
 
 - **Narration can misreport.** Mitigated by (a) faithful passthrough, we add no distortion, and (b) an independent low-cost watcher model that narrates rather than trusting the coder's self-report, plus the PR-reviewer catching "said it tested, didn't." Residual risk: the watcher itself can be wrong. Acceptable.
